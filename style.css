@@ -1,0 +1,35 @@
+body {
+    font-family: Arial,  sans-serif; /* Семейство шрифтов */
+    font-size: 16px; /* Размер основного шрифта в <p></p>  */
+    background-color: #ffffff; /* Цвет фона веб-страницы */
+    color: #000000; /* Цвет основного текста */ 
+    animation: background-change 3s infinite;
+}
+h1 {
+    color: #5500c4; /* Цвет заголовка */
+    font-size: 24px; /* Размер шрифта в пунктах */
+    font-family: Georgia, serif; /* Семейство шрифтов */
+    animation: color-change 3s infinite;
+
+}
+h2 {
+    color: #008c96; /* Цвет заголовка */
+    font-size: 24px; /* Размер шрифта в пунктах */
+    font-family: Georgia, serif; /* Семейство шрифтов */
+    animation: font-resize 3s infinite;
+}
+@keyframes color-change {
+    0% { color: #7f5ae4; }
+    50% { color: #5c4c8a; }
+    100% { color: #7f5ae4; }
+}
+@keyframes background-change {
+    0% { background: #665210; }
+    50% { background: #705a31; }
+    100% { background: #665210; }
+}
+@keyframes font-resize {
+    0% { font-size: 20px; }
+    50% { font-size: 25px; }
+    100% { font-size: 20px; }
+}
