@@ -1,0 +1,19 @@
+from flask import Flask
+from bot_logic import flip_coin
+import random
+facts_list = ["В условиях тотальной цифровизации проблема технологической зависимости приобрела глобальный международный характер.", "Существует достаточно доказательств того, что длительный фокус на экране наносит вред маленьким детям.", "Согласно исследованию M. A. Throuvala, M. D. Griffiths, M. Rennoldson, D. J. Kuss, изменчивость показателей распространённости технологической зависимости в мировом масштабе лежит в диапазоне от 0,8% до 26,7%."]
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return '<p>Здравствуйте это сайт ученика кудлента</p> <a href="/random_fact">Посмотреть случайный факт!</a> <a href="/flip_coin">бросить монетку!</a>'
+@app.route("/random_fact")
+def random_fact():
+    return f'<p>{random.choice(facts_list)}</p>'
+@app.route("/flip_coin")
+def secret():
+    coin = flip_coin()
+    return f'<p>{f"Монетка выпала так: {coin}"}</p>'
+
+app.run(debug=True)
