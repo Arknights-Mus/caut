@@ -38,8 +38,8 @@
           <span>8 и более</span></a>
       </li>
       <li class="list__item">
-        <a href={{size + "/2" }}>
-          <img class="item__img" src="../static/img/battery_02.jpg" alt="light">
+        <a href={{size + "/1" }}>
+          <img class="item__img" src="../static/img/light_2.svg.jpg" alt="light">
           <span>наша экологическа сборка</span></a>
       </li>
     </ul>
